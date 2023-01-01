@@ -1,0 +1,11 @@
+Differences Btw react and Angular
+
+1) To build a component
+    React: Manually create component folders and file
+    Angular: from CLI: ng generate component user-registration-form
+        Automatically creates a folder with four files inside
+            - a template file html
+            - a style file, css/scss (depending on what was selected)
+            - a TypeScript file
+            - a test file ending with spec.ts (could be ignored)
+            

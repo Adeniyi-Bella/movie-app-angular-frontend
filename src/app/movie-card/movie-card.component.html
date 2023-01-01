@@ -1,0 +1,126 @@
+<!-- src/app/movie-card/movie-card.component.html -->
+<div>
+<app-navbar></app-navbar></div>
+<div class="movie-container">
+  <div class="filter-div">
+    <span class="button-spacing">
+      <button
+        mat-raised-button
+        (click)="displayFavorites()"
+        color="accent"
+        aria-hidden="false"
+        aria-label="Show only favorites"
+      >
+        Filter by Favorites
+      </button>
+    </span>
+    <span>
+      <button
+        mat-raised-button
+        (click)="getMovies()"
+        color="accent"
+        aria-hidden="false"
+        aria-label="Show All"
+      >
+        Show all
+      </button>
+    </span>
+  </div>
+  <div class="grid">
+    <mat-card *ngFor="let movie of movies" class="mat-card__style grid__item">
+      <mat-card-header class="mat-card-header__style">
+        <mat-card-title class="title">
+          <b>Title:</b> {{ movie.Title }}<br />
+          <b>Release Year:</b>  {{ movie.release_year }}
+        </mat-card-title>
+        <mat-card-subtitle class="subtitle"
+          ><b>Directed by:</b> {{ movie.director_names }}</mat-card-subtitle
+        >
+      </mat-card-header>
+      <mat-card-content>
+        <img
+          src="{{ movie.image }}"
+          alt="{{ movie.Title }}"
+          class="movie-image"
+        />
+        <mat-card-actions class="mat-card-actions__style">
+          <!-- <div class="wrapper">
+            <input type="checkbox" class="heart-checkbox" id="heart-checkbox">
+            <label title="click to add/delete from favorites" class="heart" for="heart-checkbox"></label>
+          </div> -->
+          <!-- <button
+            mat-raised-button
+            (click)="addFavoriteMovie(movie._id)"
+            color="accent"
+            aria-hidden="false"
+            aria-label="Add to Fav"
+          >
+           Add to Fav
+          </button>
+          <button
+            mat-raised-button
+            (click)="addFavoriteMovie(movie._id)"
+            color="accent"
+            aria-hidden="false"
+            aria-label="Add to Fav"
+          >
+           More-Info
+          </button>
+          <mat-icon>favorite_border</mat-icon> -->
+          <!-- <button
+            mat-button
+            (click)="
+              openDirectorDialog(
+                movie.Director.Name,
+                movie.Director.Bio,
+                movie.Director.Birth
+              )
+            "
+            color="primary"
+            aria-hidden="false"
+            aria-label="Click to learn about this movie's director"
+          >
+            Director
+          </button> -->
+          <!-- <button
+            mat-button
+            (click)="
+              openSynopsisDialog(
+                movie.Title,
+                movie.Description,
+                movie.CriticRating,
+                movie.AudienceRating
+              )
+            "
+            color="primary"
+            aria-hidden="false"
+            aria-label="Click for a plot synopsis of this movie"
+          >
+            Synopsis
+          </button> -->
+           
+          <button
+            *ngIf="isFavoriteMovie(movie._id) === false"
+            mat-button
+            (click)="addFavoriteMovie(movie._id)"
+            color="accent"
+            title="Add to Fav"
+          >
+          
+            <mat-icon>favorite_border</mat-icon>
+          </button>
+         
+          <button
+            mat-button
+            *ngIf="isFavoriteMovie(movie._id) === true"
+            (click)="deleteFavoriteMovie(movie._id)"
+            color="accent"
+            title="Remove from Fav"
+          >
+            <mat-icon class="mat-icon__style">favorite</mat-icon>
+          </button>
+        </mat-card-actions>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

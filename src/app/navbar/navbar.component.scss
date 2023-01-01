@@ -1,0 +1,43 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+/* mouse over link */
+a:hover {
+  color: #e65100;
+}
+
+/* selected link */
+a:active {
+  color: whitesmoke;
+}
+
+.greeting {
+  font-size: small;
+  margin-right: 10px;
+}
+
+.toolbar-length {
+  width: 100vw;
+}
+
+.person {
+  margin-right: 20px;
+}
+@media only screen and (min-width: 690px) {
+  .greeting {
+    font-size: medium;
+  }
+}

@@ -1,0 +1,95 @@
+.movie-container {
+    width: 95vw;
+    padding-top: 25px;
+    padding-bottom: 30px;
+    margin: auto;
+  }
+  
+  .filter-div {
+    width: 95vw;
+    margin-bottom: 35px;
+    text-align: center;
+  }
+  
+  .button-spacing {
+    padding-right: 10px;
+  }
+  
+  .mat-card__style {
+    flex: 1 1 auto;
+    align-items: center;
+  }
+  
+  .mat-card-header__style {
+    padding-bottom: 10px;
+  }
+  
+  .title {
+    font-family: "Fjalla One", Roboto, sans-serif;
+  }
+  
+  .subtitle {
+    font-size: 19px;
+  }
+  
+  .mat-mdc-card-content {
+    padding: none;
+  }
+  
+  .movie-image {
+    border-radius: 5px;
+    max-width: 250px;
+  }
+  
+  .mat-card-actions__style {
+    width: 95%;
+    margin: 0;
+  }
+  
+  @supports (display: grid) {
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 15px;
+      margin: auto;
+    }
+  
+    .grid__item {
+      background-color: lightgrey;
+      border-radius: 10px;
+      min-height: auto;
+      max-width: 305px;
+      min-width: 305px;
+      margin: auto;
+    }
+  }
+
+  
+  
+  /* Media calls */
+  @media only screen and (min-width: 690px) {
+    .grid__item {
+      min-width: 450px;
+      max-width: 500px;
+    }
+  }
+  
+  @media only screen and (min-width: 930px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 90vw;
+    }
+  }
+  
+  @media only screen and (min-width: 1350px) {
+    .grid {
+      grid-template-columns: repeat(3, 1fr);
+      
+    }
+  }
+  
+  @media only screen and (min-width: 2550px) {
+    .grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
