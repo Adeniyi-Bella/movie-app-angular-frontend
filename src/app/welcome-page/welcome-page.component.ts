@@ -16,10 +16,7 @@ export class WelcomePageComponent {
   /**
    * Open dialog when the signup button is clicked
    */
-  openUserRegistrationDialog(): void {
-    // this.dialog.open(UserRegistrationFormComponent, {
-    //   // Assigning the dialog a width
-    //   width: '280px',
+  openRegistrationView(): void {
     this.router.navigate(['registration']);
   }
 
