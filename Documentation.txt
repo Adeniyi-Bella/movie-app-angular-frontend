@@ -8,4 +8,18 @@ Differences Btw react and Angular
             - a style file, css/scss (depending on what was selected)
             - a TypeScript file
             - a test file ending with spec.ts (could be ignored)
+
+2) To connect to an API
+    React:  ComponentDidMount method with axios library for class component.
+            use state/use effect with axios/fetch for functional component.
+    Angular: ngOnInit works like componentDidMount. @Input to set data. HttpClient works in place of fetch/axios.
+                Services component are used to isolate data, carry out operations on data (fetching, saving, etc.), or both 
+
+3) Component
+    React: Could be functional or class and not typescript dependent
+    Angular: Angular is a somewhat strict framework and you need to follow it's rules, the components are implemented with classes and typescript.
+
+4) Routing
+    React: Routing is done with Router and Route library.
+    Angular: Routing is done with Router library with the navigate method.
             
