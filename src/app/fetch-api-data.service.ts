@@ -8,13 +8,15 @@ import {
 import { Observable, throwError } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-//Declaring the api url that will provide data for the client app
+//Declaring the api endpoint that will provide data for the client app
 const apiEndpoint = 'https://imbd-movies.herokuapp.com/';
 
-//Tells angular this service would be available everywhere i.e root
+//injectable decorator tells angular this service component would be available everywhere i.e root
 @Injectable({
   providedIn: 'root',
 })
+
+//class component creation
 export class FetchApiDataService {
   // Inject the HttpClient module to the constructor params
   // This will provide HttpClient to the entire class, making it available via this.http
@@ -22,12 +24,12 @@ export class FetchApiDataService {
   // Making the api call for the user registration endpoint
   /**
    * @service POST to an API endpoint to register a user
-   * @param {any} userDetails
+   * @param {any} userDetails arguments can be of any data type
    * @returns a user object in json format
    * @function userRegistration
    */
   public userRegistration(userDetails: any): Observable<any> {
-    console.log(userDetails);
+    // console.log(userDetails);
     return this.http
       .post(apiEndpoint + 'users', userDetails)
       .pipe(catchError(this.handleError));
@@ -42,7 +44,7 @@ export class FetchApiDataService {
    */
 
   public userLogin(userDetails: any): Observable<any> {
-    console.log(userDetails);
+    // console.log(userDetails);
     return this.http
       .post(apiEndpoint + 'login', userDetails)
       .pipe(catchError(this.handleError));
