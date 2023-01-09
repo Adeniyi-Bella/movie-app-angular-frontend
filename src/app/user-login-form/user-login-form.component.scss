@@ -1,3 +1,7 @@
+.centre-elements{
+  margin: 300px auto;
+  max-width: 500px;
+}
 .login-margin {
     margin-right: 10px;
     margin-bottom: 15px;
@@ -9,5 +13,9 @@
   
   .title {
     padding-bottom: 15px;
+  }
+  .flex-form {
+    display: flex;
+    flex-direction: column;
   }
 
