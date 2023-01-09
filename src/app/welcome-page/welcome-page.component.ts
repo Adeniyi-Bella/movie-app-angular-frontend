@@ -13,24 +13,5 @@ export class WelcomePageComponent {
   constructor( private router: Router, public dialog: MatDialog) {}
   ngOnInit(): void {}
 
-  /**
-   * Open dialog when the signup button is clicked
-   */
-  openUserRegistrationDialog(): void {
-    // this.dialog.open(UserRegistrationFormComponent, {
-    //   // Assigning the dialog a width
-    //   width: '280px',
-    this.router.navigate(['registration']);
-  }
 
-  /**
-   * Open dialog when the login button is clicked
-   */
-  openUserLoginDialog(): void {
-    this.dialog.open(UserLoginFormComponent, {
-      // Assigning the dialog a width
-      width: '280px',
-    // this.router.navigate(['login']);
-  })
-  }
 }

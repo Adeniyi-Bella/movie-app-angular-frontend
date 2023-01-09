@@ -8,7 +8,7 @@
  import { Component, OnInit, Input } from '@angular/core';
 
  // Close the dialog on success
- import { MatDialogRef } from '@angular/material/dialog';
+//  import { MatDialogRef } from '@angular/material/dialog';
  
  // Bring in the API calls
  import { FetchApiDataService } from '../fetch-api-data.service';
@@ -28,7 +28,7 @@
  
    constructor(
      public fetchApiData: FetchApiDataService,
-     public dialogRef: MatDialogRef<UserLoginFormComponent>,
+    //  public dialogRef: MatDialogRef<UserLoginFormComponent>,
      public snackBar: MatSnackBar,
      private router: Router
    ) {}
@@ -50,7 +50,7 @@
          localStorage.setItem('favorites', result.user.favoriteMovies);
          localStorage.setItem('email', result.user.Email);
          localStorage.setItem('birthday', result.user.Birthday);
-         this.dialogRef.close(); // This will close the modal on success!
+        //  this.dialogRef.close(); // This will close the modal on success!
          this.router.navigate(['movies']);
        },
        (result) => {
@@ -61,7 +61,7 @@
      );
    }
  
-   closeDialog(): void {
-     this.dialogRef.close();
-   }
+  //  closeDialog(): void {
+  //    this.dialogRef.close();
+  //  }
  }
