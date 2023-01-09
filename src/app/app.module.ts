@@ -22,7 +22,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MovieCardComponent } from './movie-card/movie-card.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
 // app routing instructions. Default = welcome page
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomePageComponent },
@@ -58,7 +58,8 @@ const appRoutes: Routes = [
     MatIconModule,
     MatToolbarModule,
     MatGridListModule,
-    MatMenuModule
+    MatMenuModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
