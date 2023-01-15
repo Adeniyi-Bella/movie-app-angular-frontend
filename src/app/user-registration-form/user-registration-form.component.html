@@ -1,11 +1,11 @@
 <!-- src/app/user-registration-form/user-registration-form.component.html -->
-<!-- <form [formGroup]="registerForm"> -->
+<!-- <form [formGroup]="angForm"> -->
   <mat-card class="centre-elements">
     <mat-card-header>
       <mat-card-title class="title">Sign Up!</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <form class="flex-form">
+      <div class="flex-form">
         <mat-form-field>
           <input
             matInput
@@ -15,6 +15,11 @@
             name="Username"
             required
           />
+          <!-- <div *ngIf="angForm.controls['Username'].invalid && (angForm.controls['Username'].dirty || angForm.controls['Username'].touched)" class="alert alert-danger">
+            <div *ngIf="angForm.controls['Username'].errors['required']">
+              Username is required.
+          </div>
+        </div> -->
         </mat-form-field>
         <mat-form-field>
           <input
@@ -47,7 +52,7 @@
             name="Birthday"
           />
         </mat-form-field>
-      </form>
+      </div>
     </mat-card-content>
     <mat-card-actions class="padding">
       <button

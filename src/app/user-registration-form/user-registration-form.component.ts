@@ -7,7 +7,7 @@ import { FetchApiDataService } from '../fetch-api-data.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 // import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
-import { AbstractControl, FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
+import { AbstractControl, FormControl,FormBuilder, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-user-registration-form',
@@ -17,14 +17,16 @@ import { AbstractControl, FormControl, FormGroup, ValidationErrors, ValidatorFn,
 })
 export class UserRegistrationFormComponent implements OnInit {
   @Input() userData = { Username: '', Password: '', Email: '', Birthday: '' };
-  
+ 
   constructor(
     public fetchApiData: FetchApiDataService,
     // public dialogRef: MatDialogRef<UserRegistrationFormComponent>,
     public snackBar: MatSnackBar,
     private router: Router,
+    private fb: FormBuilder
     // public myForm: FormGroup,
   ) {}
+
 
   ngOnInit(): void {}
 
