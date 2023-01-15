@@ -23,6 +23,7 @@ import { MovieCardComponent } from './movie-card/movie-card.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SynopsisComponent } from './synopsis/synopsis.component';
 // app routing instructions. Default = welcome page
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomePageComponent },
@@ -40,7 +41,8 @@ const appRoutes: Routes = [
     UserRegistrationFormComponent,
     MovieCardComponent,
     NavbarComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    SynopsisComponent
   ],
   imports: [
     BrowserModule,
