@@ -5,14 +5,14 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 // import { GenreComponent } from '../genre/genre.component';
 // import { DirectorComponent } from '../director/director.component';
-// import { SynopsisComponent } from '../synopsis/synopsis.component';
+import { SynopsisComponent } from '../synopsis/synopsis.component';
 
 @Component({
   selector: 'app-movie-card',
   templateUrl: './movie-card.component.html',
   styleUrls: ['./movie-card.component.scss'],
 })
-export class MovieCardComponent implements OnInit {
+export class MovieCardComponent {
   movies: any[] = [];
   favorites: any[] = [];
   allMovies: any[] = [];
@@ -35,6 +35,8 @@ export class MovieCardComponent implements OnInit {
   getMovies(): void {
     this.fetchApiData.getAllMovies().subscribe((resp: any) => {
       this.movies = resp; 
+      console.log(this.movies);
+      
       return this.movies;
     });
   }
@@ -57,60 +59,26 @@ export class MovieCardComponent implements OnInit {
   }
 
   /**
-   * Open the dialog when the genre button is clicked
-   * @params {string} name - genre name
-   * @params {string} description = genre description
-   */
-  // openGenreDialog(name: string, description: string): void {
-  //   this.dialog.open(GenreComponent, {
-  //     data: {
-  //       Name: name,
-  //       Description: description,
-  //     },
-  //     width: '400px',
-  //   });
-  // }
-
-  /**
-   * Open the dialog when the director button is clicked
-   * @params {string} name - director name
-   * @params {string} bio = director description
-   * @params {string} birth - director birth year
-   */
-  // openDirectorDialog(name: string, bio: string, birth: string): void {
-  //   this.dialog.open(DirectorComponent, {
-  //     data: {
-  //       Name: name,
-  //       Bio: bio,
-  //       Birth: birth,
-  //     },
-  //     width: '400px',
-  //   });
-  // }
-
-  /**
    * Open the dialog when the synopsis button is clicked
    * @params {string} title - movie name
    * @params {string} description = plot description
    * @params {string} cRating = critic rating
    * @params {string} aRating = audience rating
    */
-  // openSynopsisDialog(
-  //   title: string,
-  //   description: string,
-  //   cRating: string,
-  //   aRating: string
-  // ): void {
-  //   this.dialog.open(SynopsisComponent, {
-  //     data: {
-  //       Title: title,
-  //       Description: description,
-  //       CriticRating: cRating,
-  //       AudienceRating: aRating,
-  //     },
-  //     width: '400px',
-  //   });
-  // }
+  openSynopsisDialog(
+    Title: string,
+    description: string,
+
+  ): void {
+    this.dialog.open(SynopsisComponent, {
+      data: {
+        
+        Description: description,
+        Title: Title,
+      },
+      width: '400px',
+    });
+  }
 
   /**
    * @returns {array} favorite movies IDs
