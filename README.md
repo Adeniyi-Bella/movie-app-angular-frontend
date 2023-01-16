@@ -13,7 +13,7 @@ The react implementation of the client side can be found [here](https://github.c
 
 ## Development server
 
-Clone the repo. Install all packages with npm i from the root. Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Clone the repo. Install all packages with `npm i` from the root. Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
