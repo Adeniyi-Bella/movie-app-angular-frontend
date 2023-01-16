@@ -1,6 +1,8 @@
 # MyFlixAngularClient
 The client-side for an application called myFlix based on its existing server-side code [Server Side](https://github.com/Adeniyi-Bella/movie-API), with supporting documentation.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4. 
+
 The react implementation of the client side can be found [here](https://github.com/Adeniyi-Bella/movie-API-client_server).
 
 ## Key features
